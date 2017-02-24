@@ -29,15 +29,15 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
-    <EmbeddedResource Include="Views\CalculatorMVVMPage.xaml" />
+    <EmbeddedResource Include="Views\CalculatorView.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\CalculatorMVVMPage.xaml.cs">
-      <DependentUpon>CalculatorMVVMPage.xaml</DependentUpon>
+    <Compile Include="Views\CalculatorView.xaml.cs">
+      <DependentUpon>CalculatorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\CalculatorViewModel.cs" />

@@ -8,7 +8,7 @@ namespace CalculatorMVVM
         {
             InitializeComponent();
 
-            MainPage = new CalculatorMVVMPage();
+            MainPage = new CalculatorView();
         }
 
         protected override void OnStart()

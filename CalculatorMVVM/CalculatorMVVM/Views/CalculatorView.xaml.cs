@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace CalculatorMVVM
 {
-    public partial class CalculatorMVVMPage : ContentPage
+    public partial class CalculatorView : ContentPage
     {
-        public CalculatorMVVMPage()
+        public CalculatorView()
         {
             InitializeComponent();
             BindingContext = new CalculatorViewModel();
