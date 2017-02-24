@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using CalculatorMVVM.ViewModels;
+using Xamarin.Forms;
 
 namespace CalculatorMVVM
 {
@@ -7,6 +8,7 @@ namespace CalculatorMVVM
         public CalculatorMVVMPage()
         {
             InitializeComponent();
+            BindingContext = new CalculatorViewModel();
         }
     }
 }

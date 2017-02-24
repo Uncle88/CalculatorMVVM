@@ -1,10 +1,15 @@
 ﻿using System;
+using System.ComponentModel;
+
 namespace CalculatorMVVM.ViewModels
 {
-    public class ViewModelBase
+    public class ViewModelBase : INotifyPropertyChanged
     {
-        public ViewModelBase()
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName)
         {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
