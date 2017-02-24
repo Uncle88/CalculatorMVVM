@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CalculatorMVVM" x:Class="CalculatorMVVM.CalculatorMVVMPage">
+	<ScrollView>
+		<Grid BackgroundColor="#EBFCF5">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="150" />
+				<RowDefinition Height="50" />
+				<RowDefinition Height="50" />
+				<RowDefinition Height="50" />
+				<RowDefinition Height="50" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Entry Grid.Row="0" Grid.ColumnSpan="4" Placeholder="Subtotal" PlaceholderColor="Aqua" VerticalOptions="End" HorizontalOptions="Center" />
+			<Button Text="Calculate" Grid.Row="1" Grid.ColumnSpan="4" BackgroundColor="Fuchsia" VerticalOptions="Center" HorizontalOptions="Center" />
+			<Label Text="Percentage:" Grid.Row="2" Grid.Column="0" Font="Large" HorizontalOptions="End" VerticalOptions="Center" />
+			<ContentView Grid.Row="2" Grid.Column="1" Padding="10, 10, 40, 10">
+				<Label Text="17" Font="Large" HorizontalOptions="End" />
+				<!--{Binding TipPercentage,&#xA;StringFormat='{0:C}'} -->
+			</ContentView>
+			<Label Text="Amount:" Grid.Row="3" Grid.Column="0" Font="Large" HorizontalOptions="End" VerticalOptions="Center" />
+			<ContentView Grid.Row="3" Grid.Column="1" Padding="10, 10, 40, 10">
+				<Label Text="{Binding TipAmount,&#xA; StringFormat='{0:C}'}" Font="Large" HorizontalOptions="End" />
+			</ContentView>
+			<Label Text="Total Amount:" Grid.Row="4" Grid.Column="0" Font="Large" HorizontalOptions="End" VerticalOptions="Center" />
+			<ContentView Grid.Row="4" Grid.Column="1" Padding="10, 10, 40, 10">
+				<Label Text="{Binding TotalAmount,&#xA;StringFormat='{0:C}'}" Font="Large" HorizontalOptions="End" />
+			</ContentView>
+		</Grid>
+	</ScrollView>
+</ContentPage>
