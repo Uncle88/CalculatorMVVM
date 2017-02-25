@@ -7,13 +7,11 @@ namespace CalculatorMVVM.ViewModels
 {
     public class CalculatorViewModel : ViewModelBase
     {
-        public CalculatorViewModel() { }
-
+        const int Persenteg = 17;
         private Command _clickCommand;
         private string _sum;
         private string _amount;
         private string _totalAmount;
-        const int _persenteg = 17;
 
         public string Sum
         {
@@ -56,7 +54,7 @@ namespace CalculatorMVVM.ViewModels
                         return;
                     }
                     var score = (Convert.ToDouble(Sum));
-                    var tip = (score * _persenteg / 100);
+                    var tip = (score * Persenteg / 100);
                     Amount = tip.ToString();
                     TotalAmount = (score + tip).ToString();
 
