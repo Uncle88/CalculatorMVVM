@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using System.Linq;
+using CalculatorMVVM.Helpers;
 
 namespace CalculatorMVVM.ViewModels
 {
@@ -9,19 +10,9 @@ namespace CalculatorMVVM.ViewModels
     {
         const int Persenteg = 17;
         private Command _clickCommand;
-        private string _sum;
         private string _amount;
         private string _totalAmount;
-
-        public string Sum
-        {
-            get { return _sum; }
-            set
-            {
-                _sum = value;
-                OnPropertyChanged(nameof(Sum));
-            }
-        }
+        private string _sum;
 
         public string Amount
         {
@@ -43,6 +34,16 @@ namespace CalculatorMVVM.ViewModels
             }
         }
 
+        public string Sum
+        {
+            get { return _sum; }
+            set
+            {
+                _sum = value;
+                OnPropertyChanged(nameof(Sum));
+            }
+        }
+
         public Command ClickCommand
         {
             get
@@ -53,13 +54,19 @@ namespace CalculatorMVVM.ViewModels
                     {
                         return;
                     }
-                    var score = (Convert.ToDouble(Sum));
-                    var tip = (score * Persenteg / 100);
-                    Amount = tip.ToString();
-                    TotalAmount = (score + tip).ToString();
+
+                    CountAmount(Sum);
 
                 }));
             }
+        }
+
+        public void CountAmount(string Sum)
+        {
+            var score = (Convert.ToDouble(Sum));
+            var tip = (score * Persenteg / 100);
+            Amount = tip.ToString();
+            TotalAmount = (tip + score).ToString();
         }
     }
 }
