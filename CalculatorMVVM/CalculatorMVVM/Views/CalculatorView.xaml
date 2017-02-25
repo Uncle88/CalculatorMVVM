@@ -18,19 +18,11 @@
 			<Entry Grid.Row="0" Grid.ColumnSpan="4" Text="{Binding Sum}" FontSize="30" Placeholder="Purchase" PlaceholderColor="Aqua" VerticalOptions="End" HorizontalOptions="Center" />
 			<Button Command="{Binding ClickCommand}" Text="Calculate" FontSize="40" Grid.Row="1" Grid.ColumnSpan="4" BackgroundColor="Fuchsia" VerticalOptions="Center" HorizontalOptions="Center" />
 			<Label Text="Percentage:" Grid.Row="2" Grid.Column="0" Font="Large" HorizontalOptions="End" VerticalOptions="Center" />
-			<ContentView Grid.Row="2" Grid.Column="1" Padding="10, 10, 40, 10">
-				<Label Text="17" Font="Large" HorizontalOptions="End" />
-			</ContentView>
+			<Label Text="17" Grid.Row="2" Grid.Column="1" Margin="5,10,5,5" Font="Large" HorizontalOptions="Center" />
 			<Label Text="Amount:" Grid.Row="3" Grid.Column="0" Font="Large" HorizontalOptions="End" VerticalOptions="Center" />
-			<ContentView Grid.Row="3" Grid.Column="1" Padding="10, 10, 40, 10">
-				<Label Text="{Binding Amount}" Font="Large" HorizontalOptions="End" />
-				<!--,&#xA; StringFormat='{0:C}'-->
-			</ContentView>
+			<Label Text="{Binding Amount}" Grid.Row="3" Grid.Column="1" Margin="5,10,5,5" Font="Large" HorizontalOptions="End" />
 			<Label Text="Total Amount:" Grid.Row="4" Grid.Column="0" Font="Large" HorizontalOptions="End" VerticalOptions="Center" />
-			<ContentView Grid.Row="4" Grid.Column="1" Padding="10, 10, 40, 10">
-				<Label Text="{Binding TotalAmount}" Font="Large" HorizontalOptions="End" />
-				<!--,&#xA;StringFormat='{0:C}'-->
-			</ContentView>
+			<Label Text="{Binding TotalAmount}" Grid.Row="4" Grid.Column="1" Margin="5,10,5,5" Font="Large" HorizontalOptions="End" />
 		</Grid>
 	</ScrollView>
 </ContentPage>
