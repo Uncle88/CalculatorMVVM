@@ -1,8 +1,5 @@
 ﻿using System;
 using Xamarin.Forms;
-using System.Threading.Tasks;
-using System.Linq;
-using CalculatorMVVM.Helpers;
 
 namespace CalculatorMVVM.ViewModels
 {
@@ -17,31 +14,19 @@ namespace CalculatorMVVM.ViewModels
         public string Amount
         {
             get { return _amount; }
-            set
-            {
-                _amount = value;
-                OnPropertyChanged(nameof(Amount));
-            }
+            set { SetProperty(ref _amount, value); }
         }
 
         public string TotalAmount
         {
             get { return _totalAmount; }
-            set
-            {
-                _totalAmount = value;
-                OnPropertyChanged(nameof(TotalAmount));
-            }
+            set { SetProperty(ref _totalAmount, value); }
         }
 
         public string Sum
         {
             get { return _sum; }
-            set
-            {
-                _sum = value;
-                OnPropertyChanged(nameof(Sum));
-            }
+            set { SetProperty(ref _sum, value); }
         }
 
         public Command ClickCommand
@@ -54,9 +39,7 @@ namespace CalculatorMVVM.ViewModels
                     {
                         return;
                     }
-
                     CountAmount(Sum);
-
                 }));
             }
         }
