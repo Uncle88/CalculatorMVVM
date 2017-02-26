@@ -15,7 +15,7 @@
 			<ColumnDefinition Width="Auto" />
 			<ColumnDefinition Width="Auto" />
 		</Grid.ColumnDefinitions>
-		<Entry Grid.Row="0" Grid.ColumnSpan="4" Text="{Binding Sum}" FontSize="30" Placeholder="Purchase" PlaceholderColor="Aqua" VerticalOptions="End" HorizontalOptions="Center" />
+		<Entry Keyboard="Numeric" Grid.Row="0" Grid.ColumnSpan="4" Text="{Binding Sum}" FontSize="30" Placeholder="Purchase" PlaceholderColor="Aqua" VerticalOptions="End" HorizontalOptions="Center" />
 		<Button Command="{Binding ClickCommand}" Text="Calculate" FontSize="40" Grid.Row="1" Grid.ColumnSpan="4" BackgroundColor="Fuchsia" VerticalOptions="Center" HorizontalOptions="Center" />
 		<Label Text="Percentage:" TextColor="White" BackgroundColor="#C7D5CF" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" Font="30" HorizontalOptions="End" VerticalOptions="Center" />
 		<Label Text="17" TextColor="Navy" BackgroundColor="#E9FCE3" Grid.Row="2" Grid.Column="1" Margin="5,10,5,5" Font="30" HorizontalOptions="Center" VerticalOptions="Center" />
