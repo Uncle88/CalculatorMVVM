@@ -1,5 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CalculatorMVVM" x:Class="CalculatorMVVM.CalculatorView">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style x:Key="labelStyle1" TargetType="Label">
+				<Setter Property="TextColor" Value="White" />
+				<Setter Property="BackgroundColor" Value="#C7D5CF" />
+				<Setter Property="FontAttributes" Value="Bold" />
+				<Setter Property="FontSize" Value="25" />
+				<Setter Property="HorizontalOptions" Value="End" />
+				<Setter Property="VerticalOptions" Value="Center" />
+				<Setter Property="VerticalOptions" Value="Center" />
+				<Setter Property="Grid.Column" Value="0" />
+				<Setter Property="Margin" Value="5,5,5,5" />
+			</Style>
+			<Style x:Key="labelStyle2" TargetType="Label">
+				<Setter Property="TextColor" Value="Navy" />
+				<Setter Property="BackgroundColor" Value="#E9FCE3" />
+				<Setter Property="Margin" Value="5,5,5,5" />
+				<Setter Property="Font" Value="25" />
+				<Setter Property="HorizontalOptions" Value="End" />
+				<Setter Property="Grid.Column" Value="1" />
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
 	<Grid>
 		<Image Grid.RowSpan="6" Grid.ColumnSpan="4" Source="wow.jpg" />
 		<Grid.RowDefinitions>
@@ -17,11 +40,11 @@
 		</Grid.ColumnDefinitions>
 		<Entry Keyboard="Numeric" Grid.Row="0" Grid.ColumnSpan="4" Text="{Binding Sum}" FontSize="30" Placeholder="Purchase" PlaceholderColor="Aqua" VerticalOptions="End" HorizontalOptions="Center" />
 		<Button Command="{Binding ClickCommand}" Text="Calculate" FontSize="40" Grid.Row="1" Grid.ColumnSpan="4" BackgroundColor="Fuchsia" VerticalOptions="Center" HorizontalOptions="Center" />
-		<Label Text="Percentage:" TextColor="White" BackgroundColor="#C7D5CF" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" Font="30" HorizontalOptions="End" VerticalOptions="Center" />
-		<Label Text="17" TextColor="Navy" BackgroundColor="#E9FCE3" Grid.Row="2" Grid.Column="1" Margin="5,10,5,5" Font="30" HorizontalOptions="Center" VerticalOptions="Center" />
-		<Label Text="Amount:" TextColor="White" BackgroundColor="#C7D5CF" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" Font="30" HorizontalOptions="End" VerticalOptions="Center" />
-		<Label Text="{Binding Amount}" TextColor="Navy" BackgroundColor="#E9FCE3" Grid.Row="3" Grid.Column="1" Margin="5,10,5,5" Font="30" HorizontalOptions="End" VerticalOptions="Center" />
-		<Label Text="Total Amount:" TextColor="White" BackgroundColor="#C7D5CF" FontAttributes="Bold" Grid.Row="4" Grid.Column="0" Font="30" HorizontalOptions="End" VerticalOptions="Center" />
-		<Label Text="{Binding TotalAmount}" TextColor="Navy" BackgroundColor="#E9FCE3" Grid.Row="4" Grid.Column="1" Margin="5,10,5,5" Font="30" HorizontalOptions="End" VerticalOptions="Center" />
+		<Label Text="Percentage:" Grid.Row="2" Style="{StaticResource labelStyle1}" />
+		<Label Text="17" Grid.Row="2" Style="{StaticResource labelStyle2}" />
+		<Label Text="Amount:" Grid.Row="3" Style="{StaticResource labelStyle1}" />
+		<Label Text="{Binding Amount}" Grid.Row="3" Style="{StaticResource labelStyle2}" />
+		<Label Text="Total Amount:" Grid.Row="4" Style="{StaticResource labelStyle1}" />
+		<Label Text="{Binding TotalAmount}" Grid.Row="4" Style="{StaticResource labelStyle2}" />
 	</Grid>
 </ContentPage>

@@ -5,7 +5,7 @@ namespace CalculatorMVVM.ViewModels
 {
     public class CalculatorViewModel : ViewModelBase
     {
-        const int Persenteg = 17;
+        private const int Persenteg = 17;
         private Command _clickCommand;
         private string _amount;
         private string _totalAmount;
@@ -56,7 +56,6 @@ namespace CalculatorMVVM.ViewModels
             catch
             {
                 return;
-                //MessageBox.Show("entered is not a number");
             }
 
         }
