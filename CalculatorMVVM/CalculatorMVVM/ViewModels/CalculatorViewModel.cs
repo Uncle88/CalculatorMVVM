@@ -14,19 +14,40 @@ namespace CalculatorMVVM.ViewModels
         public string Amount
         {
             get { return _amount; }
-            set { SetProperty(ref _amount, value); }
+            set
+            {
+                if (value != _amount)
+                {
+                    _amount = value;
+                    OnPropertyChanged();
+                }
+            }
         }
 
         public string TotalAmount
         {
             get { return _totalAmount; }
-            set { SetProperty(ref _totalAmount, value); }
+            set
+            {
+                if (value != _totalAmount)
+                {
+                    _totalAmount = value;
+                    OnPropertyChanged();
+                }
+            }
         }
 
         public string Sum
         {
             get { return _sum; }
-            set { SetProperty(ref _sum, value); }
+            set
+            {
+                if (value != _sum)
+                {
+                    _sum = value;
+                    OnPropertyChanged();
+                }
+            }
         }
 
         public Command ClickCommand
