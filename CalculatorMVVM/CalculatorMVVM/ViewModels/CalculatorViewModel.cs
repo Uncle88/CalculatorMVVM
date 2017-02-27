@@ -67,18 +67,10 @@ namespace CalculatorMVVM.ViewModels
 
         public void CountAmount(string Sum)
         {
-            try
-            {
-                var score = (Convert.ToDouble(Sum));
-                var tip = (score * Persenteg / 100);
-                Amount = tip.ToString();
-                TotalAmount = (tip + score).ToString();
-            }
-            catch
-            {
-                return;
-            }
-
+            var score = (Convert.ToDouble(Sum));
+            var tip = (score * Persenteg / 100);
+            Amount = tip.ToString();
+            TotalAmount = (tip + score).ToString();
         }
     }
 }
